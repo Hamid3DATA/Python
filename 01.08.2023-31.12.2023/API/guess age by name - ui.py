@@ -32,9 +32,3 @@ if user_guess == age:
 else:
     print("INCORRECT")
     print(name + " is actually " + age + " years old!")
-
-
-
-
-
-print(guess_age.json())
