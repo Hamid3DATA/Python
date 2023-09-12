@@ -4,18 +4,13 @@ import json
 #"https://api.agify.io/?name=" after '=' you can type the name"
 
 
-
 name_selected = input("Put in a random name")
 
 guess_age_endpoint = "https://api.agify.io/?name=" + name_selected.lower()
-
-
 guess_age = requests.request("GET", guess_age_endpoint)
 
 count = json.dumps(guess_age.json()["count"])
-
 name = json.dumps(guess_age.json()["name"])
-
 age = json.dumps(guess_age.json()["age"])
 
 
