@@ -1,4 +1,4 @@
-*** [!NOTE]
+### [!NOTE]
 files that end with "ui" stand for user input
 files that end with "rg" stand for randomly generated
 
