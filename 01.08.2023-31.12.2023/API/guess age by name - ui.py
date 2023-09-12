@@ -18,6 +18,9 @@ print("count: " + count)
 print("name: " + name)
 print("")
 
+if count == ("0"):
+  print("The name you have written is not in our list, please try another name")
+  exit()
 
 user_guess = input("How old do you think this person is?")
 
