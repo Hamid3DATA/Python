@@ -27,8 +27,10 @@ print("")
 user_guess = input("How old do you think this person is?")
 
 if user_guess == age:
+    print("")
     print("CORRECT")
     print(name + " is indeed " + age + " years old!")
 else:
+    print("")
     print("INCORRECT")
     print(name + " is actually " + age + " years old!")
