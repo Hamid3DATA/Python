@@ -20,7 +20,14 @@ guess_nationality = requests.request("GET", guess_nationality_endpoint)
 count = json.dumps(guess_nationality.json()["count"])
 name = json.dumps(guess_nationality.json()["name"])
 
-country_id1 = json.dumps(guess_nationality.json()["country"][0]["country_id"])
+try:
+    country_id1 = json.dumps(guess_nationality.json()["country"][0]["country_id"])
+except IndexError:
+    print("")
+    print("A weird name has been created, please retry")
+    print("The name that was generated: " + user_name)
+    exit()
+
 country_id1 = country_id1.replace('"', '')
 
 country_id2 = json.dumps(guess_nationality.json()["country"][1]["country_id"])
