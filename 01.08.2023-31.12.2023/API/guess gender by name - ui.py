@@ -66,5 +66,3 @@ else:
     print("")
     print("")
     print("")
-
-print(guess_gender.json())
