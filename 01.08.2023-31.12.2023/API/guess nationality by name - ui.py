@@ -10,7 +10,6 @@ countries = ["Afghanistan", "Åland Islands", "Albania", "Algeria", "American Sa
 name_selected = input("Put in a random name")
 
 guess_nationality_endpoint = "https://api.nationalize.io/?name=" + name_selected.lower()
-
 guess_nationality = requests.request("GET", guess_nationality_endpoint)
 
 count = json.dumps(guess_nationality.json()["count"])
@@ -46,7 +45,6 @@ if user_guess.upper() == country_id1 or user_guess.upper() == country_id2 or use
        if x == user_guess.upper():
           country_name = countries[help]
     
-
     if country_id1 == user_guess.upper():
       probability = json.dumps(guess_nationality.json()["country"][0]["probability"])
 
@@ -61,7 +59,6 @@ if user_guess.upper() == country_id1 or user_guess.upper() == country_id2 or use
 
     elif country_id5 == user_guess.upper():
        probability = json.dumps(guess_nationality.json()["country"][4]["probability"])
-
 
     print("")
     print("CORRECT")
@@ -101,7 +98,6 @@ else:
        if x == country_id5:
           country_name5 = countries[help]
 
-
     probability1 = json.dumps(guess_nationality.json()["country"][0]["probability"])
     probability2 = json.dumps(guess_nationality.json()["country"][1]["probability"])
     probability3 = json.dumps(guess_nationality.json()["country"][2]["probability"])
@@ -132,4 +128,3 @@ else:
 
     print(country_name5 + " - " + country_id5)
     print("probability: " + probability1)
-    print("")
