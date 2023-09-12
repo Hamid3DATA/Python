@@ -33,6 +33,10 @@ print("name: " + name)
 print("")
 
 
+if count == ("0"):
+  print("The name that has been generated is not in our list, please try again")
+  exit()
+
 user_guess = input("What gender do you think this person is? (male/female - boy/girl)")
 print("")
 
