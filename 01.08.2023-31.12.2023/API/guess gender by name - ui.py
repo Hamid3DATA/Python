@@ -20,14 +20,14 @@ probability = json.dumps(guess_gender.json()["probability"])
 
 probability = float(probability) * 100
 
+if count == ("0"):
+  print("")
+  print("The name you have written is not in our list, please try another name")
+  exit()
 
 print("count: " + count)
 print("name: " + name)
 print("")
-
-if count == ("0"):
-  print("The name you have written is not in our list, please try another name")
-  exit()
 
 user_guess = input("What gender do you think this person is? (male/female - boy/girl)")
 print("")
