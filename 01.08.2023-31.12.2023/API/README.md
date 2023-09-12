@@ -1,3 +1,7 @@
+*** [!NOTE]
+files that end with "ui" stand for user input
+files that end with "rg" stand for randomly generated
+
 All of these API's were found [here](https://apipheny.io/free-api/)
 
 
