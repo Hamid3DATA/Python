@@ -8,17 +8,16 @@ help = 0
 name_selected = input("Put in a random name")
 
 guess_gender_endpoint = "https://api.genderize.io/?name=" + name_selected.lower()
-
-
 guess_gender = requests.request("GET", guess_gender_endpoint)
 
 count = json.dumps(guess_gender.json()["count"])
 name = json.dumps(guess_gender.json()["name"])
-
 gender = json.dumps(guess_gender.json()["gender"])
+
 gender = gender.replace('"', '')
 
 probability = json.dumps(guess_gender.json()["probability"])
+
 probability = float(probability) * 100
 
 
@@ -56,13 +55,7 @@ if user_guess.lower() == gender:
     print("CORRECT")
     print("This person is: " + gender)
     print("With the probability of: " + str(probability) + "%")
-    print("")
-    print("")
-    print("")
 else:
     print("INCORECT")
     print(name + "is a " + gender)
     print("With the probability of: " + str(probability) + "%")
-    print("")
-    print("")
-    print("")
