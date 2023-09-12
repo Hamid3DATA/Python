@@ -24,7 +24,7 @@ try:
     country_id1 = json.dumps(guess_nationality.json()["country"][0]["country_id"])
 except IndexError:
     print("")
-    print("A weird name has been created, please retry")
+    print("A weird name has been generated, please retry")
     print("The name that was generated: " + user_name)
     exit()
 
