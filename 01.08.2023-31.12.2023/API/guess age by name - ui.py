@@ -13,14 +13,14 @@ count = json.dumps(guess_age.json()["count"])
 name = json.dumps(guess_age.json()["name"])
 age = json.dumps(guess_age.json()["age"])
 
+if count == ("0"):
+  print("")
+  print("The name you have written is not in our list, please try another name")
+  exit()
 
 print("count: " + count)
 print("name: " + name)
 print("")
-
-if count == ("0"):
-  print("The name you have written is not in our list, please try another name")
-  exit()
 
 user_guess = input("How old do you think this person is?")
 
