@@ -29,18 +29,23 @@ if count == ("0"):
 
 user_guess = input("How old do you think this person is?")
 
+if user_guess > age:
+    age_difference = int(user_guess) - int(age)
+elif age > user_guess:
+    age_difference = int(age) - int(user_guess)
+
 if user_guess == age:
     print("CORRECT")
     print(name + " is indeed " + age + " years old!")
 else:
     print("")
     print("INCORRECT")
-    
+    print("")
     print(name + " is actually " + age + " years old!")
     
     if user_guess > age:
       print("")
-      print("you were off by " + str(int(user_guess) - int(age)) + " years")
+      print("you were off by " + str(age_difference) + " year(s)")
     elif age > user_guess:
       print("")
-      print("you were off by " + str(int(age) - int(user_guess)) + " years")
+      print("you were off by " + str(age_difference) + " year(s)")
