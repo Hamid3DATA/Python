@@ -79,30 +79,35 @@ else:
        help += 1
        if x == country_id1:
           country_name1 = countries[help]
+          print("country1: " + country_name1)
     
     help = -1
     for x in domains:
        help += 1
        if x == country_id2:
           country_name2 = countries[help]
+          print("country2: " + country_name2)
     
     help = -1
     for x in domains:
        help += 1
        if x == country_id3:
           country_name3 = countries[help]
+          print("country3: " + country_name3)
     
     help = -1
     for x in domains:
        help += 1
        if x == country_id4:
           country_name4 = countries[help]
+          print("country4: " + country_name4)
     
     help = -1
     for x in domains:
        help += 1
        if x == country_id5:
           country_name5 = countries[help]
+          print("country5: " + country_name5)
 
     probability1 = json.dumps(guess_nationality.json()["country"][0]["probability"])
     probability2 = json.dumps(guess_nationality.json()["country"][1]["probability"])
@@ -116,21 +121,38 @@ else:
     print("This person can be from:")
     print("")
 
-    print(country_name1 + " - " + country_id1)
-    print("probability: " + probability1)
-    print("")
+    try:
+      print(country_name1 + " - " + country_id1)
+      print("probability: " + probability1)
+      print("")
+    except NameError:
+      pass
 
-    print(country_name2 + " - " + country_id2)
-    print("probability: " + probability1)
-    print("")
+    try:
+      print(country_name2 + " - " + country_id2)
+      print("probability: " + probability2)
+      print("")
+    except NameError:
+      pass
 
-    print(country_name3 + " - " + country_id3)
-    print("probability: " + probability1)
-    print("")
+    try:
+      print(country_name3 + " - " + country_id3)
+      print("probability: " + probability3)
+      print("")
+    except NameError:
+      pass
 
-    print(country_name4 + " - " + country_id4)
-    print("probability: " + probability1)
-    print("")
+    try:
+      print(country_name4 + " - " + country_id4)
+      print("probability: " + probability4)
+      print("")
+    except NameError:
+      pass
+      
 
-    print(country_name5 + " - " + country_id5)
-    print("probability: " + probability1)
+    try:
+      print(country_name5 + " - " + country_id5)
+      print("probability: " + probability5)
+      print("")
+    except NameError:
+      pass
