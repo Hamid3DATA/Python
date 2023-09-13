@@ -37,3 +37,10 @@ else:
     print("INCORRECT")
     
     print(name + " is actually " + age + " years old!")
+    
+    if user_guess > age:
+      print("")
+      print("you were off by " + str(int(user_guess) - int(age)) + " years")
+    elif age > user_guess:
+      print("")
+      print("you were off by " + str(int(age) - int(user_guess)) + " years")
