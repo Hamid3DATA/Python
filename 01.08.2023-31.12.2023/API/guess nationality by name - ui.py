@@ -79,35 +79,30 @@ else:
        help += 1
        if x == country_id1:
           country_name1 = countries[help]
-          print("country1: " + country_name1)
     
     help = -1
     for x in domains:
        help += 1
        if x == country_id2:
           country_name2 = countries[help]
-          print("country2: " + country_name2)
     
     help = -1
     for x in domains:
        help += 1
        if x == country_id3:
           country_name3 = countries[help]
-          print("country3: " + country_name3)
     
     help = -1
     for x in domains:
        help += 1
        if x == country_id4:
           country_name4 = countries[help]
-          print("country4: " + country_name4)
     
     help = -1
     for x in domains:
        help += 1
        if x == country_id5:
           country_name5 = countries[help]
-          print("country5: " + country_name5)
 
     probability1 = json.dumps(guess_nationality.json()["country"][0]["probability"])
     probability2 = json.dumps(guess_nationality.json()["country"][1]["probability"])
@@ -148,7 +143,6 @@ else:
       print("")
     except NameError:
       pass
-      
 
     try:
       print(country_name5 + " - " + country_id5)
