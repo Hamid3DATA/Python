@@ -9,4 +9,4 @@ All of these API's were found [here](https://apipheny.io/free-api/)
 Here is a list of "all" avaialble "free" [API's](https://api.publicapis.org/entries)
 (or [here](https://mixedanalytics.com/blog/list-actually-free-open-no-auth-needed-apis/))
 
-MAL is worth cheking out imo
+MAL.py is worth cheking out imo
