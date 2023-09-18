@@ -25,7 +25,7 @@ for x in user_sentence:
             status = True
             break
         
-        if x is " ":
+        if x == " ":
             sentence_list.append(letters_combined)
             letters_combined = ""
             sentence_list.append(x)
