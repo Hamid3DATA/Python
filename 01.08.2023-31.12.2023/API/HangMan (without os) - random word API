@@ -1,0 +1,67 @@
+import requests
+import json
+
+url = "https://random-word-api.herokuapp.com/word"
+r = requests.request("GET", url)
+word = json.dumps(r.json())
+word = word.replace("[", "").replace("]", "").replace('"', '')
+
+word_length = len(word)
+word_list = list(word)
+tries = 10
+game = True
+stuff = "_" * word_length
+stuff_list = list(stuff)
+letter_indices = []
+letters_used = []
+
+# https://www.freecodecamp.org/news/python-find-in-list-how-to-find-the-index-of-an-item-or-element-in-a-list/
+
+print("This is Hangman, you have " + str(tries) + " tries total.")
+
+while game:
+    answer = input("If you want to know the rules of the game type 'rules' \nIf you want to give up type 'exit'\nAnswer:")
+
+    if answer.lower() != word and answer.lower() != "rules" and len(answer.lower()) > 1 or answer.lower() != word and answer.lower() != "rules" and len(answer.lower()) == 1 and answer not in word:
+        tries -= 1
+
+    if answer and answer != "exit":
+        for x in range(10):
+            print("")
+        letter_indices.clear()
+
+        if tries == 0:
+            for x in range(10):
+                print("")
+            print("Game Over!")
+            print("The word was: " + word)
+            game = False
+
+        if answer.lower() not in word and len(answer.lower()) < 2:
+            if answer not in letters_used:
+                letters_used.append(answer.lower())
+
+        if answer.lower() in word and len(answer.lower()) < 2:
+            for x in range(len(word_list)):
+                if word_list[x] == answer.lower():
+                    letter_indices.append(x)
+            for y in range(len(letter_indices)):
+                stuff_list[letter_indices[y]] = answer.lower()
+        print(''.join(stuff_list))
+        print("Letters used: " + str(letters_used))
+        print("Tries left: " + str(tries))
+
+    if answer.lower() == "rules":
+        print("*The rules are simple, you have to guess the word, that is " + str(word_length) + " characters long, "
+              "you have " + str(tries) + " tries, you can also guess one letter at a time.")
+
+    elif answer.lower() == word or ''.join(stuff_list) == word:
+        for x in range(10):
+            print("")
+        print("Congratulations, you have won! You had " + str(tries) +
+              " try(tries) left")
+        print("The word was: " + word)
+        game = False
+
+    if answer.lower() == "exit":
+        game = False
