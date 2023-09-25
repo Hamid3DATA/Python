@@ -3,7 +3,6 @@ from bs4 import BeautifulSoup
 import pandas as pd
 
 URL = "https://en.wikipedia.org/wiki/Characters_in_the_Animal_Crossing_series"
-table_class = "wikitable sortable jquery-tablesorter"
 response = requests.get(URL)
 soup = BeautifulSoup(response.text, "html.parser")
 table = soup.find("table", {"class": "wikitable"})
