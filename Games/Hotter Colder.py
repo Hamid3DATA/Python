@@ -40,6 +40,7 @@ while True:
   if guess_difference > previous_guess_difference:
     print("colder")
     print("")
+    
   elif guess_difference < previous_guess_difference:
     print("warmer")
     print("")
