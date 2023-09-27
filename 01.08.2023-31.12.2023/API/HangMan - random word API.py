@@ -42,7 +42,7 @@ if answer1.lower() == "start":
 
         answer = input("Guess:")
         
-        if answer.lower() != word and len(answer) > 1 or answer.lower() != word and len(answer) == 1 and answer not in word_list:
+        if answer.lower() != word and len(answer) > 1 or answer.lower() != word and len(answer) == 1 and answer not in word_list and answer not in letters_used:
             tries -= 1
             for x in range(2):
                 print("")
