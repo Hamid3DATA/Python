@@ -227,7 +227,7 @@ print("")
 if aired_from != "null":
   print("aired from: " + aired_from)
 
-if airing == "false" and episodes != "1" and episodes != "null":
+if airing == "false" and episodes != "1" and episodes != "null" and status != '"Not yet aired"':
   print("aired to: " + aired_to)
   print("")
 else:
@@ -244,7 +244,7 @@ if aired_prop_from_day != "null" or aired_prop_from_month != "null" or aired_pro
   print("year: " + aired_prop_from_year)
   print("")
 
-if airing == "false" and episodes != "1" and episodes != "null":
+if airing == "false" and episodes != "1" and episodes != "null" and status != '"Not yet aired"':
   print("aired to:")
   print("day: " + aired_prop_to_day)
   print("month: " + aired_prop_to_month)
