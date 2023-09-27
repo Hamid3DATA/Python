@@ -13,12 +13,12 @@ if previous_guess_difference > 20:
   print("Cold!")
   print("")
 
-elif previous_guess_difference < 20:
-  print("Warm!")
-  print("")
-
 elif previous_guess_difference < 10:
   print("Hot!")
+  print("")
+
+elif previous_guess_difference < 20:
+  print("Warm!")
   print("")
 
 elif guess == pc:
@@ -42,11 +42,11 @@ while True:
     print("")
     
   elif guess_difference < previous_guess_difference:
-    print("warmer")
-    print("")
-
-  elif previous_guess_difference < 10:
-    print("Hot!")
-    print("")
+    if guess_difference < 10:
+      print("Hot!")
+    else:
+      print("")
+      print("warmer")
+      print("")
     
   previous_guess_difference = guess_difference
