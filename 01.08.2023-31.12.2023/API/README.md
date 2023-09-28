@@ -2,6 +2,8 @@
 files that end with "ui" stand for user input
 <br />
 files that end with "rg" stand for randomly generated
+<br />
+There is a problem with bored API.py file
 
 All of these API's were found [here](https://apipheny.io/free-api/)
 
