@@ -204,7 +204,7 @@ elif user_answer == "6":
     if help != 1:
         if float(the_accessibility) > -0.99999999999999999999 and float(the_accessibility) < 1.00000000000000000001:
 
-            accessibility_activity_endpoint = "http://www.boredapi.com/api/activity?accessibility=" + the_accessibility
+            accessibility_activity_endpoint = "https://www.boredapi.com/api/activity?accessibility=" + the_accessibility
             accessibility_activity = requests.request("GET", accessibility_activity_endpoint)
 
             try:
@@ -248,7 +248,7 @@ elif user_answer == "7":
     if help != 1:
         if float(min_range) > -0.99999999999999999999 and float(min_range) < 1.00000000000000000001 and float(max_range) > -0.99999999999999999999 and float(max_range) < 1.00000000000000000001:
 
-            accessibility_range_activity_endpoint = "http://www.boredapi.com/api/activity?minaccessibility=" + min_range + "&maxaccessibility=" + max_range
+            accessibility_range_activity_endpoint = "https://www.boredapi.com/api/activity?minaccessibility=" + min_range + "&maxaccessibility=" + max_range
             accessibility_range_activity = requests.request("GET", accessibility_range_activity_endpoint)
 
             try:
@@ -275,7 +275,7 @@ elif user_answer == "7":
             print("you can only type float numbers between 0.0 and 1.0")
 
 elif user_answer == "8":
-    random_activity_endpoint = "http://www.boredapi.com/api/activity/"
+    random_activity_endpoint = "https://www.boredapi.com/api/activity/"
     random_activity = requests.request("GET", random_activity_endpoint)
     
     activity = json.dumps(random_activity.json()["activity"])
