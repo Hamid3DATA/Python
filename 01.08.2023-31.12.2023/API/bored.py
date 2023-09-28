@@ -116,7 +116,7 @@ elif user_answer == "4":
         help = 1
     
     if help != 1:
-        if float(the_price) > -0.99999999999999999999 and float(the_price) < 1.00000000000000000001:
+        if float(the_price) == 0.0  or float(the_price) == 1.0 or float(the_price) > 0.0 and float(the_price) < 1.0:
 
             price_activity_endpoint = "https://www.boredapi.com/api/activity?price=" + the_price
             price_activity = requests.request("GET", price_activity_endpoint)
@@ -160,7 +160,7 @@ elif user_answer == "5":
         help = 1
 
     if help != 1:
-        if float(min_range) > -0.99999999999999999999 and float(min_range) < 1.00000000000000000001 and float(max_range) > -0.99999999999999999999 and float(max_range) < 1.00000000000000000001:
+        if float(min_range) == 0.0 or float(min_range) == 1.0 or float(min_range) > 0.0 and float(min_range) < 1.0 and float(max_range) == 0.0 or float(max_range) == 1.0 or float(max_range) > 0.0 and float(max_range) < 1.0:
 
             price_range_activity_endpoint = "https://www.boredapi.com/api/activity?minprice=" + min_range + "&maxprice=" + max_range
             price_range_activity = requests.request("GET", price_range_activity_endpoint)
@@ -202,7 +202,7 @@ elif user_answer == "6":
         help = 1
 
     if help != 1:
-        if float(the_accessibility) > -0.99999999999999999999 and float(the_accessibility) < 1.00000000000000000001:
+        if float(the_accessibility) == 0.0 or float(the_accessibility) == 1.0 or float(the_accessibility) > 0.0 and float(the_accessibility) < 1.0:
 
             accessibility_activity_endpoint = "https://www.boredapi.com/api/activity?accessibility=" + the_accessibility
             accessibility_activity = requests.request("GET", accessibility_activity_endpoint)
@@ -246,7 +246,7 @@ elif user_answer == "7":
         help = 1
 
     if help != 1:
-        if float(min_range) > -0.99999999999999999999 and float(min_range) < 1.00000000000000000001 and float(max_range) > -0.99999999999999999999 and float(max_range) < 1.00000000000000000001:
+        if float(min_range) == 0.0 or float(min_range) == 1.0 or float(min_range) > 0.0 and float(min_range) < 1.0 and float(max_range) == 0.0 or float(max_range) == 1.0 or float(max_range) > 0.0 and float(max_range) < 1.0:
 
             accessibility_range_activity_endpoint = "https://www.boredapi.com/api/activity?minaccessibility=" + min_range + "&maxaccessibility=" + max_range
             accessibility_range_activity = requests.request("GET", accessibility_range_activity_endpoint)
