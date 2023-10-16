@@ -93,3 +93,22 @@ if answer1.lower() == "start":
             print("The word was: " + word)
 
             game = False
+
+url = "https://api.dictionaryapi.dev/api/v2/entries/en/" + word
+r = requests.request("GET", url)
+try:
+  definition = json.dumps(r.json()[0]["meanings"][0]["definitions"][0]["definition"])
+  print("")
+  print("definition(s):")
+  print(definition)
+except KeyError:
+  print("Sorry pal, we couldn't find definitions for the word you were looking for")
+
+try:
+  definition = json.dumps(r.json()[0]["meanings"][0]["definitions"][1]["definition"])
+  print("")
+  print(definition)
+except IndexError:
+  exit()
+except KeyError:
+  exit()
