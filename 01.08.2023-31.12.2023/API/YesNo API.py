@@ -7,6 +7,7 @@ url = r.json()["image"]
 answer = r.json()["answer"]
 
 webbrowser.open(url)
+print("")
 print(answer)
 print("")
 print(url)
