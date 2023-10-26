@@ -9,7 +9,7 @@ print("select the size of the QR Code in pixels (It's gonna be a square, so you 
 try:
   size = int(input())
 except ValueError:
-  print("it has to be a numebr!")
+  print("it has to be a number!")
   exit()
 
 url = "https://api.qrserver.com/v1/create-qr-code/?data=" + data + "&size=" + str(size) + "x" + str(size)
